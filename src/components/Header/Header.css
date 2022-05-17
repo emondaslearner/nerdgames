@@ -1,0 +1,147 @@
+.HeaderMain{
+    height:65px;
+    background-color: #201F29;
+    border-bottom:2px solid #2F2C3D;
+}
+.mobile{
+    display: none;
+}
+.Header{
+    display:flex;
+    padding:10px 0;
+    position:fixed;
+    width:100%;
+    z-index:99;
+    background-color: #201F29;
+    border-bottom:2px solid #2F2C3D;
+}
+.logo{
+    width:20%;
+}
+.logo img{
+    width: 70px;
+    margin-left:10%;
+}
+.SearchBar{
+    width:40%;
+}
+.SearchBar input{
+    background-color: #201F29;
+    box-sizing: border-box;
+    width:50%;
+    padding:7px 0;
+    padding-left:15px;
+    border: 1.9px solid;
+    display: block;
+    border-radius: 5px;
+    border-image: linear-gradient(to right, #F1028E, #FAB43D) 1;
+    color: white;
+    margin-top:5px;
+}
+.SearchBar input:focus{
+    outline: none;
+}
+.account{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left:12%;
+}
+.button{
+    font-family: 'Rubik';
+    font-size: 13px;
+    font-weight:500;
+    border-radius:5px;
+    padding:7px 25px !important;
+    border: none;
+    color: white;
+    background: linear-gradient(90.99deg, #F1028E -0.66%, #FAB43D 99.89%);
+    transition: .3s all ease;
+    cursor: pointer;
+}
+.account button:hover{
+    background: linear-gradient(90.99deg, #FAB43D -0.66%, #F1028E 99.89%);
+}
+.account .profile{
+    display:flex;
+    margin-left:25px;
+}
+.account .profileDetails{
+    display: flex;
+    color:white;
+    margin-left:10px;
+    font-size:14px;
+}
+.account .profileDetails .arrow{
+    margin-top:15px;
+    margin-left:5px;
+}
+.HeaderMobile{
+    display: none;
+}
+@media screen and (max-width:1000px) {
+    .Header .logo{
+        width:10%;
+    }
+    .Header .SearchBar{
+        width:20%;
+    }
+    .Header .SearchBar input{
+        width:100%;
+        margin-left:3%;
+    }
+    .Header .account{
+        margin-left:25%;
+    }
+}
+@media screen and (max-width:800px) {
+    .Header .SearchBar{
+        width:25%;
+        margin-left:5%;
+    }
+    .Header .account{
+        margin-left:10%;
+    }
+}
+@media screen and (max-width:600px) {
+    .Header{
+        display: none;
+    }
+    .HeaderMain{
+        height: 100px !important;
+    }
+    .HeaderMobile{
+        display: block !important;
+        padding-top:10px;
+        position:fixed;
+        width:100%;
+        background-color: #201F29;
+        border-bottom:2px solid #2F2C3D;
+        z-index:99;
+        padding-bottom:10px;
+    }
+    .HeaderMobile>div{
+        display: flex;
+    }
+    .HeaderMobile .SearchBar{
+        width:50%;
+        margin-left:5%;
+    }
+    .HeaderMobile .SearchBar input{
+        width:90%;
+    }
+    .HeaderMobile>div .account{
+        width:60%;
+        display: flex;
+        justify-content:flex-end;
+        align-items: center;
+    }
+    .btn{
+        margin-top:10px;
+        width:50%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right:10px;
+    }
+}

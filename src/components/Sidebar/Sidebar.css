@@ -1,0 +1,108 @@
+.SidebarMain{
+    width:18%;
+    display: block;
+}
+.Sidebar{
+    background-color: #202029;
+    width:18%;
+    position:fixed;
+    height:100%;
+}
+.Sidebar ul{
+    margin:0;
+    margin-top:20px;
+}
+.Sidebar ul>li{
+    list-style: none;
+    margin:15px 0 !important;
+}
+.Sidebar ul>li a{
+    text-decoration: none;
+    color:#F63356;
+    font-size:14px;
+}
+
+.Sidebar ul>li a::after{
+    content:'';
+    display: block;
+    margin-top:5px;
+    width:0;
+    height:2px;
+    background-color:#F63356;
+    transition: width .3s;
+}
+.Sidebar ul>li a:hover::after{
+    width:100%
+}
+.Sidebar ul>li .slidBarArrow{
+    margin-left:10px;
+    transition:all ease .3s;
+}
+.Sidebar ul ul li{
+    margin: 7px 0 !important;
+}
+.Sidebar ul ul li a{
+    color: #787E88;
+}
+.Sidebar ul ul li a::after{
+    background-color:#787E88;
+}
+.Sidebar ul ul{
+    display: none;
+}
+.rotateArrow{
+    transform:rotate(90deg);
+}
+.Sidebar .icon{
+    margin-right:10px;
+    color: #da5102;
+}
+.Bar{
+    display: none;
+}
+.ShowSlideBar{
+    display: block !important;
+    width:40%;
+    z-index:99;
+}
+.closeSideBar{
+    position: absolute;
+    color: white;
+    right:20px;
+    top:10px;
+    font-size:23px;
+    cursor: pointer;
+    display: none;
+}
+@media screen and (max-width:1050px) {
+    .closeSideBar{
+        display: block;
+    }
+    .SidebarMain{
+        position: relative;
+        display:none;
+        width:0;
+    }
+    .Bar{
+        position:fixed;
+        width:40px;
+        height:40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(90.99deg, #F1028E -0.66%, #FAB43D 99.89%);
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        top:130px;
+        transition: all ease .3s;
+        cursor: pointer;
+    }
+    .Bar:hover{
+        background: linear-gradient(90.99deg, #900757 -0.66%, #F1028E 99.89%);
+    }
+}
+@media screen and (max-width:600px) {
+    .ShowSlideBar{
+        width:80%;
+    }
+}
